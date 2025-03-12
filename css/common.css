@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*CSS RESET START*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*CSS RESET END*/
+
+/*COLOR VARIABLES START*/
+:root {
+  --main-bg-color-text-color: #fff;
+  --secondary-bg-color: #a9cfd0;
+  --usual-decorations: #35aa9a;
+  --unusual-decorations: #4cc7b6;
+  --main-text-color: #090b08;
+  --main-title-color: #002b32;
+}
+/*COLOR VARIABLES END*/
+
+/*COMMONT STYLES START*/
+html {
+  scroll-behavior: auto;
+}
+.main_button {
+  display: flex;
+  padding: 20px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  background: var(--usual-decorations);
+  box-shadow: 1px 3px 4px 0px rgba(0, 0, 0, 0.1);
+  color: var(--main-bg-color-text-color);
+  font-family: 'Open Sans';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  max-width: 180px;
+  margin-top: 72px;
+  transition: all 0.3s;
+}
+.main_button:hover {
+  transition: all 0.3s;
+  background: var(--main-title-color);
+  color: var(--unusual-decorations);
+  text-decoration: none;
+}
+.main_button:active {
+  border-radius: 40px;
+
+  background: var(--CTA-Green, #35aa9a);
+
+  box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.25) inset;
+}
+body {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+h1 {
+  color: var(--main-title-color);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 98px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  max-width: 625px;
+}
+.container {
+}
+h2 {
+}
+.section_subtitle {
+}
+/*COMMONT STYLES END*/
+a:hover {
+  cursor: pointer;
+}
