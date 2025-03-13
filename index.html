@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!-- FONTS START -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONTS END -->
     <!-- Slider-swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link
@@ -19,65 +26,148 @@
     <link rel="icon" type="image/x-icon" href="img/global/fav.png" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
-  <body>
+  <body class="lang-en">
     <header class="header">
       <div class="header_wrapper mycontainer">
         <nav class="navbar">
           <a href="#" class="logo_wrapper">
-            <img src="img/global/logo.webp" alt="logo" class="main-logo logo-desk" />
-            <img src="img/global/logogo.svg" alt="logo" class="main-logo logo-mob" />
+            <img src="img/header/logo.webp" alt="logo" class="main-logo logo-desk" />
+            <img src="img/header/logo.webp" alt="logo" class="main-logo logo-mob" />
           </a>
 
-          <ul class="navbar_menu">
-            <li><a href="#about" class="nav_elem">About</a></li>
-            <li><a href="#Ourservice" class="nav_elem">Our Service</a></li>
-
-            <li><a href="#hiw" class="nav_elem">How it Works</a></li>
-            <li><a href="#triumph" class="nav_elem">Triumph Stories</a></li>
-            <li><a href="#contact" class="nav_elem">Contact Us</a></li>
-          </ul>
-          <a
-            href=""
-            class="main_button header_button_desk"
-            data-toggle="modal"
-            data-target="#exampleModal"
-            >Buy Now</a
-          >
-          <div class="burger">
-            <div class="burger_space" id="burger"></div>
+          <div class="wrap_right_head">
+            <ul class="navbar_menu">
+              <li>
+                <a href="#hiw" class="nav_elem en">Remodeling Expertise</a>
+                <a href="#hiw" class="nav_elem esp">Experiencia en Remodelación</a>
+              </li>
+              <li>
+                <a href="#triumph" class="nav_elem en">Why Choose FIXO?</a>
+                <a href="#triumph" class="nav_elem esp">¿Por qué elegir FIXO?</a>
+              </li>
+              <li>
+                <a href="#contact" class="nav_elem en">Before & After</a>
+                <a href="#contact" class="nav_elem esp">Antes y Después</a>
+              </li>
+            </ul>
+            <a
+              href=""
+              class="main_button header_button_desk en"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              >Contact Us</a
+            >
+            <a
+              href=""
+              class="main_button header_button_desk esp"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              >Contáctanos</a
+            >
+            <div class="en-esp-selector">
+              <span class="selector english">En</span>
+              <span class="selector-separator"></span>
+              <span class="selector espaniol">Esp</span>
+            </div>
+            <div class="burger">
+              <div class="burger_space" id="burger">
+                <span class="stick"></span>
+                <span class="stick"></span>
+                <span class="stick"></span>
+              </div>
+            </div>
           </div>
         </nav>
         <div class="popup" id="popup">
           <!-- <img src="img/header/mobmenubg.png" alt="moblogo" class="mob_menu_bgimage" /> -->
           <div class="popup_textblock" id="popupSlide">
             <ul class="navbar_menu_mobile">
-              <li><a href="#about" class="nav_elem_mobile">About</a></li>
               <li>
-                <a href="#Ourservice" class="nav_elem_mobile">Our Service</a>
-              </li>
-
-              <li>
-                <a href="#hiw" class="nav_elem_mobile">How it Works</a>
+                <a href="#hiw" class="nav_elem_mobile en">Remodeling Expertise</a>
+                <a href="#hiw" class="nav_elem_mobile esp">Experiencia en Remodelación</a>
               </li>
               <li>
-                <a href="#triumph" class="nav_elem_mobile">Triumph Stories</a>
+                <a href="#triumph" class="nav_elem_mobile en">Why Choose FIXO?</a>
+                <a href="#triumph" class="nav_elem_mobile esp">¿Por qué elegir FIXO?</a>
               </li>
               <li>
-                <a href="#contact" class="nav_elem_mobile">Contact Us</a>
+                <a href="#contact" class="nav_elem_mobile en">Before & After</a>
+                <a href="#contact" class="nav_elem_mobile esp">Antes y Después</a>
               </li>
             </ul>
-            <a
-              href=""
-              class="main_button header_button_mob"
-              data-toggle="modal"
-              data-target="#exampleModal"
-              >Buy Now</a
-            >
+            <a href="" class="main_button header_button_mob en">Contact Us</a>
+            <a href="" class="main_button header_button_mob esp">Contáctanos</a>
+
+            <div class="en-esp-selector mob-selector">
+              <span class="selector english">En</span>
+              <span class="selector-separator"></span>
+              <span class="selector espaniol">Esp</span>
+            </div>
           </div>
         </div>
       </div>
     </header>
-
+    <section class="main">
+      <div class="mycontainer">
+        <div class="main_wrapper">
+          <div class="main_text-content">
+            <h1 class="en">Transform Your Home with<span class="accent-color"> FIXO</span></h1>
+            <h1 class="esp">Transforma Tu Hogar con<span class="accent-color"> FIXO</span></h1>
+            <img src="img/main/heromob2.png" alt="hero" class="main_hero_mob en" />
+            <img src="img/main/heromobesp2.png" alt="hero" class="main_hero_mob esp" />
+            <p class="main_subtitle en">
+              Fast, High-Quality Bathroom & Kitchen Remodeling in Puerto Rico
+            </p>
+            <p class="main_subtitle esp">
+              Remodelación rápida y de alta calidad de baños y cocinas en Puerto Rico
+            </p>
+            <p class="main_text en">
+              At <span class="accent_weight">FIXO</span>, we bring your dream remodel to life
+              quickly without compromising on quality. Our trusted network of certified contractors
+              - professionals we’ve already worked with and trust - ensures your project is
+              completed efficiently and to the highest standards.
+            </p>
+            <p class="main_text esp">
+              En <span class="accent_weight">FIXO</span>, hacemos realidad la remodelación de tus
+              sueños de manera rápida y sin comprometer la calidad. Nuestra red confiable de
+              contratistas certificados - profesionales con los que ya hemos trabajado y en quienes
+              confiamos - garantiza que tu proyecto se complete de manera eficiente y con los más
+              altos estándares.
+            </p>
+            <a href="#" class="main_button main-sec-button en">Get Started</a>
+            <a href="#" class="main_button main-sec-button esp">Comienza ahora</a>
+          </div>
+          <img src="img/main/hero.webp" alt="hero" class="main_hero_banner en" />
+          <img src="img/main/herospanish.webp" alt="hero" class="main_hero_banner esp" />
+        </div>
+      </div>
+    </section>
+    <section class="remo">
+      <div class="mycontainer">
+        <div class="remo_wrapper">
+          <div class="remo-left">
+            <img src="img/remodeling/l-remo.webp" alt="remodeling" class="remo-left-img" />
+            <div class="remo-left-deco">
+              <img src="img/remodeling/licon.webp" alt="" class="remo-left-icon" />
+            </div>
+          </div>
+          <div class="remo-middle">
+            <img src="img/remodeling/mremo.webp" alt="measuring" class="remo-mid-img" />
+          </div>
+          <div class="remo-right">
+            <img src="" alt="floor" class="remo-right-img" />
+            <div class="remo-right-decotext">
+              <p class="remo-right-text">
+                At FIXO, we remodel kitchens and bathrooms into modern, functional spaces. Our
+                expert team ensures precision, speed, and exceptional results tailored to your
+                vision.
+              </p>
+              <img src="img/remodeling/ricon.webp" alt="icon" class="remo-right-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer></footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

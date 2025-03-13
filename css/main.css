@@ -1,0 +1,123 @@
+.main {
+  width: 100%;
+}
+.mycontainer {
+  max-width: 1201px;
+  margin: 0 auto;
+}
+.main_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 194px;
+  padding-left: 20px;
+  margin-right: 20px;
+}
+.main_text-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 552px;
+  width: 100%;
+}
+
+.accent-color {
+  color: var(--Light-Blue, #203de8);
+  font-family: 'Barlow Semi Condensed';
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.main_subtitle {
+  color: var(--Dark-Blue-3, #0e1f85);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+.main_text {
+  color: var(--Grey, #6a6a6a);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 483px;
+  margin-bottom: 42px;
+}
+.accent_weight {
+  font-weight: 600;
+}
+.main_button {
+}
+.main-sec-button {
+  max-width: 220px;
+  padding: 16px 32px;
+}
+.main_hero_banner {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 715px;
+}
+.en {
+}
+.esp {
+}
+.main_hero_mob {
+  display: none;
+}
+@media (max-width: 1820px) {
+  .main_wrapper {
+    margin-top: 150px;
+  }
+  .main_hero_banner {
+    max-width: 600px;
+  }
+}
+@media (max-width: 1400px) {
+  .main_hero_banner {
+    right: 20px;
+  }
+}
+@media (max-width: 1140px) {
+  .main_hero_banner {
+    position: initial;
+    display: none;
+  }
+  .main_wrapper {
+    flex-direction: column;
+  }
+  .main_hero_mob {
+    display: block;
+  }
+  h1 {
+    margin-top: 0;
+    font-size: 38px;
+  }
+  .main_wrapper {
+    margin-top: 116px;
+    padding-left: 29px;
+    padding-right: 29px;
+    margin-right: 0;
+  }
+  .accent-color {
+    font-size: 38px;
+  }
+  .main_text-content {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .main-sec-button {
+    max-width: 100%;
+    width: 100%;
+  }
+  .main_text-content {
+    margin-top: 0;
+  }
+}

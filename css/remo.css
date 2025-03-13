@@ -1,0 +1,51 @@
+.remo {
+  width: 100%;
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
+
+.remo_wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 32px;
+}
+.remo-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+}
+.remo-left-img {
+  max-width: 277px;
+}
+.remo-left-deco {
+  height: 124px;
+  width: 277px;
+
+  border-radius: 20px;
+  background: #ffe9e6;
+  position: relative;
+}
+.remo-left-icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -45px;
+  left: 30px;
+}
+.remo-middle {
+}
+.remo-mid-img {
+}
+.remo-right {
+}
+.remo-right-img {
+}
+.remo-right-decotext {
+}
+.remo-right-text {
+}
+.remo-right-icon {
+}
