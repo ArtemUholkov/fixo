@@ -59,3 +59,38 @@ document.addEventListener('DOMContentLoaded', function () {
     selector.addEventListener('click', () => changeLanguage('es'));
   });
 });
+
+const testiWrapper = document.querySelector('.testi_wrapper');
+
+// const testiWrapper = document.querySelector(".testi_wrapper");
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+testiWrapper.addEventListener('mousedown', (e) => {
+  isDown = true;
+  testiWrapper.classList.add('active');
+  startX = e.pageX - testiWrapper.offsetLeft;
+  scrollLeft = testiWrapper.scrollLeft;
+  testiWrapper.style.userSelect = 'none'; // Prevent text selection
+});
+
+testiWrapper.addEventListener('mouseleave', () => {
+  isDown = false;
+  testiWrapper.classList.remove('active');
+});
+
+testiWrapper.addEventListener('mouseup', () => {
+  isDown = false;
+  testiWrapper.classList.remove('active');
+  testiWrapper.style.userSelect = ''; // Re-enable text selection
+});
+
+testiWrapper.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - testiWrapper.offsetLeft;
+  const walk = (x - startX) * 0.85; // Reduced speed multiplier for smoother scrolling
+  testiWrapper.scrollLeft = scrollLeft - walk;
+});

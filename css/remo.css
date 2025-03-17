@@ -1,7 +1,7 @@
 .remo {
   width: 100%;
-  padding-top: 300px;
-  padding-bottom: 300px;
+  padding-top: 250px;
+  padding-bottom: 200px;
 }
 
 .remo_wrapper {
@@ -9,6 +9,7 @@
   align-items: flex-end;
   justify-content: center;
   gap: 32px;
+  flex-wrap: wrap;
 }
 .remo-left {
   display: flex;
@@ -36,16 +37,152 @@
   left: 30px;
 }
 .remo-middle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .remo-mid-img {
+  max-width: 481px;
 }
 .remo-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
 }
 .remo-right-img {
+  max-width: 379px;
 }
 .remo-right-decotext {
+  padding: 12px 25px 12px 18px;
+  border-radius: 20px;
+  background: #e6e9fc;
+  position: relative;
+  max-width: 379px;
 }
 .remo-right-text {
+  color: var(--Grey, #6a6a6a);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 .remo-right-icon {
+  position: absolute;
+  top: -90px;
+  right: 30px;
+  z-index: 5;
+  width: 80px;
+  height: 80px;
+}
+.sec-title {
+  position: absolute;
+  top: -120px;
+  left: 0;
+  color: var(--Dark-Blue, #03061b);
+  font-family: 'Barlow Semi Condensed';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.remo_button {
+  max-width: 220px;
+  padding: 16px 25px;
+  align-self: flex-end;
+  margin-bottom: 27px;
+}
+.sec-mob_title {
+  display: none;
+}
+.remo_button.esp {
+  max-width: 232px;
+}
+@media (max-width: 1000px) {
+  .remo {
+    padding-bottom: 100px;
+  }
+  .sec-title {
+    position: relative;
+    top: initial;
+    left: initial;
+  }
+  .remo {
+    padding-left: 29.5px;
+    padding-right: 29.5px;
+  }
+  .sec-desk_title {
+    display: none;
+  }
+  .remo-left {
+    flex-direction: row;
+    max-width: 481px;
+    width: 100%;
+  }
+  .remo-left-deco {
+    height: 373px;
+  }
+  .remo-left-icon {
+    left: -40px;
+    bottom: 40px;
+    top: initial;
+    right: initial;
+    height: 60px;
+    width: 60px;
+  }
+  .remo-right-img {
+    max-width: 481px;
+    width: 100%;
+    height: auto;
+  }
+  .remo-right-decotext {
+    max-width: 481px;
+  }
+  .remo-left-img {
+    max-width: initial;
+  }
+  .sec-mob_title {
+    display: block;
+    white-space: wrap;
+    font-size: 36px;
+    max-width: 552px;
+  }
+  .remo {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 520px) {
+  .remo-right-icon {
+    width: 60px;
+    height: 60px;
+    top: -50px;
+    right: 20px;
+  }
+  .remo-mid-img {
+    width: 100%;
+    height: auto;
+  }
+  .remo-right-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  .remo-right-decotext {
+    max-width: initial;
+  }
+  .remo-left-img {
+    max-width: 220px;
+  }
+  .remo-left-deco {
+    height: 297px;
+  }
+
+  .remo_wrapper {
+    gap: 20px;
+  }
 }

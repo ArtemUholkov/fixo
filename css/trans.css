@@ -1,0 +1,111 @@
+.trans {
+  width: 100%;
+  padding-top: 180px;
+  padding-bottom: 300px;
+}
+
+.trans_wrapper {
+  background: url('../img/why/whybg.webp');
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 76px 174px 75px 0;
+  position: relative;
+}
+.trans_title {
+  color: var(--White, #fff);
+  font-family: 'Barlow Semi Condensed';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 22px;
+}
+
+.trans_text {
+  color: var(--White, #fff);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 30px;
+  max-width: 508px;
+}
+
+.trans_button {
+  background: var(--White, #fff);
+  transition: all 0.3s;
+  color: var(--Dark-Blue-2, #0b196a);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 220px;
+}
+.trans_button:hover {
+  background: var(--White, #fff);
+  opacity: 0.8;
+  transition: all 0.3s;
+  color: var(--Dark-Blue-2, #0b196a);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.trans_img {
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+}
+@media (max-width: 1100px) {
+  .trans_wrapper {
+    padding-right: 50px;
+  }
+}
+@media (max-width: 990px) {
+  .trans_wrapper {
+    padding: 42px 32px;
+    align-items: flex-start;
+  }
+  .trans_img {
+    width: 310px;
+    height: 420px;
+    left: initial;
+    right: 20px;
+  }
+}
+@media (max-width: 860px) {
+  .trans_title {
+    font-size: 36px;
+    max-width: 326px;
+  }
+  .trans_text {
+    max-width: 325px;
+  }
+}
+@media (max-width: 650px) {
+  .trans_img {
+    top: -350px;
+    bottom: initial;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+  }
+  .trans {
+    padding-top: 440px;
+  }
+  .trans_button {
+    width: 100%;
+  }
+  .trans_text {
+    max-width: none;
+  }
+}

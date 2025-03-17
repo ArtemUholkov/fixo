@@ -1,0 +1,154 @@
+.how {
+  padding-top: 200px;
+  width: 100%;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+
+.how_title {
+  color: var(--Dark-Blue, #03061b);
+  font-family: 'Barlow Semi Condensed';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 86px;
+}
+.how_content_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 406px;
+  position: relative;
+}
+.how_graph {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the element */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image is properly scaled */
+  z-index: -1; /* Keeps it behind other content */
+}
+.how_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 10px;
+  background: #fff;
+
+  /* Shadow 2 */
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 20px 14px 40px 0px rgba(0, 0, 0, 0.08);
+  padding: 16px 20px;
+}
+.how_item.i1 {
+  align-self: flex-start;
+  margin-top: 49px;
+}
+.how_item.i2 {
+  align-self: flex-end;
+  margin-bottom: 32px;
+}
+
+.how_item.i3 {
+  align-self: flex-start;
+}
+
+.how_item_image {
+  width: 70px;
+  height: 70px;
+}
+.how_item_texts_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.how_item_title {
+  color: var(--Dark-Blue, #03061b);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.how_item_text {
+  color: var(--Grey, #6a6a6a);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.how_button.esp {
+  max-width: 240px;
+}
+.how_item_text.t1 {
+  width: 241px;
+}
+.how_item_text.t2 {
+  width: 265px;
+}
+.how_item_text.t3 {
+  width: 261px;
+}
+
+.how_button {
+  /* margin-top: 80px; */
+  max-width: 220px;
+  display: block;
+  margin: 80px auto 0;
+  text-align: center;
+}
+@media (max-width: 1250px) {
+  .how {
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+  .how_content_wrapper {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .how_title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 66px;
+  }
+  .how {
+    background-image: url('../img/howtostart/graphmob.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top 50px;
+    padding-top: 100px;
+  }
+  .how_graph {
+    display: none;
+  }
+  .how_item_image {
+    width: 60px;
+    height: 60px;
+  }
+  .how_item_text.t1 {
+    width: auto;
+  }
+  .how_item_text.t2 {
+    width: auto;
+  }
+  .how_item_text.t3 {
+    width: auto;
+  }
+  .how_item {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 0 !important;
+  }
+  .how_button {
+    margin-top: 64px;
+  }
+}
