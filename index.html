@@ -584,7 +584,431 @@
         </div>
       </div>
     </section>
-    <section class="form_contact" id="contact"></section>
+    <section class="form_contact" id="contact">
+      <div class="mycontainer">
+        <div
+          id="crmWebToEntityForm"
+          class="zcwf_lblLeft crmWebToEntityForm"
+          style="
+            background-color: white;
+            color: black;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+          "
+        >
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+          <!-- Form Styles -->
+          <style>
+            .zcwf_lblLeft {
+              width: 100%;
+              padding: 25px;
+              box-sizing: border-box;
+              background-color: white;
+              border-radius: 8px;
+            }
+
+            .zcwf_row {
+              margin-bottom: 18px;
+              display: flex;
+              flex-direction: column;
+            }
+
+            .zcwf_col_lab {
+              font-size: 14px;
+              margin-bottom: 5px;
+            }
+
+            .zcwf_col_fld input,
+            .zcwf_col_fld select,
+            .zcwf_col_fld textarea {
+              width: 100%;
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              font-size: 14px;
+              margin-bottom: 5px;
+            }
+
+            .zcwf_col_fld textarea {
+              resize: vertical;
+              height: 100px;
+            }
+
+            .zcwf_col_fld select {
+              background-color: white;
+            }
+
+            .formsubmit {
+              display: flex;
+              padding: 16px !important;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              border-radius: 10px !important;
+              background: var(--Dark-Blue-2, #0b196a);
+              color: var(--White, #fff);
+              font-family: Montserrat;
+              font-size: 18px !important;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+              max-width: 200px;
+              margin: 0 auto;
+              transition: all 0.3s;
+              border-radius: 10px;
+              cursor: pointer;
+            }
+
+            .formsubmit:hover {
+              background-color: #005fa3;
+              /* border-radius: 10px; */
+              background: var(--Light-Blue, #203de8);
+              transition: all 0.3s;
+            }
+
+            .zcwf_title {
+              font-size: 22px;
+              font-weight: bold;
+              margin-bottom: 20px;
+              color: #333;
+            }
+
+            /* Message Box Styles */
+            .wf_customMessageBox {
+              font-family: Arial, Helvetica, sans-serif;
+              color: #132c14;
+              background: #f5faf5;
+              box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+              max-width: 90%;
+              width: max-content;
+              word-break: break-word;
+              z-index: 11000;
+              border-radius: 6px;
+              border: 1px solid #a9d3ab;
+              min-width: 100px;
+              padding: 10px 15px;
+              display: flex;
+              align-items: center;
+              position: fixed;
+              top: 20px;
+              left: 50%;
+              transform: translate(-50%, 0);
+            }
+
+            .wf_customCircle {
+              position: relative;
+              background-color: #12aa67;
+              border-radius: 100%;
+              width: 20px;
+              height: 20px;
+              flex: none;
+              margin-right: 7px;
+            }
+
+            .wf_customCheckMark {
+              box-sizing: unset !important;
+              position: absolute;
+              transform: rotate(45deg) translate(-50%, -50%);
+              left: 6px;
+              top: 9px;
+              height: 8px;
+              width: 3px;
+              border-bottom: 2px solid #fff;
+              border-right: 2px solid #fff;
+            }
+
+            .wf_customClose {
+              box-sizing: border-box;
+              position: relative;
+              width: 18px;
+              height: 18px;
+            }
+
+            .wf_customClose::after,
+            .wf_customClose::before {
+              content: '';
+              display: block;
+              box-sizing: border-box;
+              position: absolute;
+              width: 12px;
+              height: 1.5px;
+              background: #616e88;
+              transform: rotate(45deg);
+              border-radius: 5px;
+              top: 8px;
+              left: 1px;
+            }
+
+            .wf_customClose::after {
+              transform: rotate(-45deg);
+            }
+            .row {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              gap: 18px;
+              flex-wrap: nowrap;
+              width: 100%;
+              margin: 0 auto;
+            }
+            .row .zcwf_row {
+              max-width: 330px;
+            }
+            .zcwf_row {
+              width: 100%;
+            }
+            #crmWebToEntityForm {
+              background: transparent !important;
+            }
+            .form_contact {
+              padding-bottom: 115px;
+              padding-top: 180px;
+            }
+            .zcwf_col_lab label {
+              color: #8d8d8d;
+
+              font-family: Montserrat;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+            input::placeholder {
+              color: #8d8d8d;
+              font-family: Montserrat, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+            textarea::placeholder {
+              color: #8d8d8d;
+              font-family: Montserrat, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+            label {
+              color: #8d8d8d;
+
+              font-family: Montserrat;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+            input[type='date'] {
+              color: #8d8d8d;
+              font-family: Montserrat, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+
+            input[type='date']::before {
+              content: attr(data-placeholder);
+              color: #8d8d8d;
+              font-family: Montserrat, sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+            }
+
+            input[type='date']:focus::before,
+            input[type='date']:valid::before {
+              content: '';
+            }
+            .zcwf_title {
+              display: none;
+            }
+            .form_title {
+              color: var(--Dark-Blue-2, #0b196a);
+              font-family: 'Barlow Semi Condensed';
+              font-size: 40px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+              text-align: center;
+              margin-bottom: 4px;
+            }
+            .form_subtitle {
+              color: var(--Dark-Blue-2, #0b196a);
+              font-family: Montserrat;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-align: center;
+              margin-bottom: 18px;
+            }
+            @media (max-width: 520px) {
+              .row {
+                flex-direction: column;
+                gap: 0;
+              }
+              .row .zcwf_row {
+                max-width: 100%;
+              }
+              .form_contact {
+                padding-top: 100px;
+                padding-bottom: 100px;
+              }
+              .form_title {
+                max-width: 226px;
+                margin: 0 auto;
+              }
+              .form_subtitle {
+                max-width: 237px;
+                margin: 0 auto;
+                margin-bottom: 28px;
+              }
+            }
+          </style>
+
+          <!-- Success Message Box -->
+          <div id="wf_splash" class="wf_customMessageBox" style="display: none">
+            <div class="wf_customCircle"><div class="wf_customCheckMark"></div></div>
+            <span id="wf_splash_info"></span>
+          </div>
+
+          <!-- Form -->
+          <form id="webform" name="WebToLeads" accept-charset="UTF-8">
+            <h2 class="form_title">Get a Quote for a Remodel</h2>
+            <p class="form_subtitle">Please fill out the form below:</p>
+
+            <div class="row">
+              <!-- Name Input -->
+              <div class="zcwf_row">
+                <!-- <div class="zcwf_col_lab"><label for="First_Name">Name</label></div> -->
+                <div class="zcwf_col_fld">
+                  <input
+                    type="text"
+                    id="First_Name"
+                    name="First Name"
+                    required
+                    placeholder="Name"
+                  />
+                </div>
+              </div>
+              <!-- Email Input -->
+              <div class="zcwf_row">
+                <div class="zcwf_col_fld">
+                  <input type="email" id="Email" name="Email" required placeholder="Email*" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Phone Number Input -->
+              <div class="zcwf_row">
+                <div class="zcwf_col_lab"><label for="Phone">Phone Number</label></div>
+                <div class="zcwf_col_fld">
+                  <input type="text" id="Phone" name="Phone" placeholder="(XXX) XXX-XXXX" />
+                </div>
+              </div>
+              <!-- Project Type -->
+              <div class="zcwf_row">
+                <div class="zcwf_col_lab"><label for="Project_Type">Project Type</label></div>
+                <div class="zcwf_col_fld">
+                  <input
+                    id="Project_Type"
+                    name="Project_Type"
+                    placeholder="Kitchen, bathroom, other"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Location or ZIP Code -->
+              <div class="zcwf_row">
+                <div class="zcwf_col_lab">
+                  <label for="Location">Location (City or ZIP Code)</label>
+                </div>
+                <div class="zcwf_col_fld">
+                  <input
+                    type="text"
+                    id="Location"
+                    name="Location"
+                    placeholder="Location or ZIP Code"
+                  />
+                </div>
+              </div>
+              <!-- Preferred Start Date -->
+              <div class="zcwf_row">
+                <div class="zcwf_col_lab"><label for="Start_Date">Preferred Start Date</label></div>
+                <div class="zcwf_col_fld">
+                  <input type="date" id="Start_Date" name="Start Date" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Estimated Budget -->
+            <div class="zcwf_row">
+              <div class="zcwf_col_lab"><label for="Budget">Estimated Budget Range</label></div>
+              <div class="zcwf_col_fld">
+                <input type="text" id="Budget" name="Budget" placeholder="Budget" />
+              </div>
+            </div>
+
+            <!-- Project Details -->
+            <div class="zcwf_row">
+              <div class="zcwf_col_lab"></div>
+              <div class="zcwf_col_fld">
+                <textarea
+                  id="Project_Details"
+                  name="Project Details"
+                  placeholder="Project Details (Tell us about your remodeling needs)"
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="zcwf_row">
+              <div class="zcwf_col_fld">
+                <input type="submit" class="formsubmit" value="Get Started" />
+              </div>
+            </div>
+          </form>
+
+          <script>
+            $(document).ready(function () {
+              $('#webform').submit(function (e) {
+                e.preventDefault();
+                var isValid = true;
+
+                // Validate required fields
+
+                if (isValid) {
+                  var formData = new FormData(this);
+                  $.ajax({
+                    url: 'https://crm.zoho.com/crm/WebToLeadForm',
+                    type: 'POST',
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                      $('#wf_splash_info').text('Form submitted successfully!');
+                      $('#wf_splash').fadeIn().delay(5000).fadeOut();
+                      $('#webform')[0].reset();
+                    },
+                    error: function () {
+                      alert('An error occurred while submitting the form');
+                    },
+                  });
+                }
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="mycontainer">
         <div class="footer_wrapper">
@@ -713,6 +1137,7 @@
         slidesPerView: 2.8,
         spaceBetween: 32,
         loop: true,
+
         centeredSlides: true,
         zoom: {
           maxRatio: 1.2,

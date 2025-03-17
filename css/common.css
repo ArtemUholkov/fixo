@@ -159,6 +159,7 @@ body {
   width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
+  background-color: #fff !important;
 }
 h1 {
   color: var(--Dark-Blue, #03061b);
