@@ -148,7 +148,7 @@
   }
   .sec-mob_title {
     display: block;
-    white-space: wrap;
+    white-space: initial;
     font-size: 36px;
     max-width: 552px;
   }

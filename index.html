@@ -427,17 +427,20 @@
     </section>
     <section class="testi">
       <div class="testi-conteiner">
-        <h2 class="testi_title en" data-aos="fade-right">Testimonials</h2>
-        <h2 class="testi_title esp" data-aos="fade-right">Testimonios</h2>
+        <div class="wrap_texts-icon">
+          <h2 class="testi_title en" data-aos="fade-right">Testimonials</h2>
+          <h2 class="testi_title esp" data-aos="fade-right">Testimonios</h2>
 
-        <p class="testi_subtitle en" data-aos="fade-right">
-          Hear from our satisfied clients - real stories that speak to our commitment to trusted
-          service:
-        </p>
-        <p class="testi_subtitle esp" data-aos="fade-right">
-          Escucha a nuestros clientes satisfechos: historias reales que reflejan nuestro compromiso
-          con un servicio de confianza.
-        </p>
+          <p class="testi_subtitle en" data-aos="fade-right">
+            Hear from our satisfied clients - real stories that speak to our commitment to trusted
+            service:
+          </p>
+          <p class="testi_subtitle esp" data-aos="fade-right">
+            Escucha a nuestros clientes satisfechos: historias reales que reflejan nuestro
+            compromiso con un servicio de confianza.
+          </p>
+        </div>
+        <img src="img/test/icon.png" alt="icon" class="arrow-icon-scroll" />
       </div>
       <div class="testi_wrapper" data-aos="fade-left">
         <div class="testi_item testi_fst">
@@ -914,7 +917,13 @@
                 <div class="zcwf_col_lab esp"><label for="Phone">Número de Teléfono</label></div>
 
                 <div class="zcwf_col_fld">
-                  <input type="text" id="Phone" name="Phone" placeholder="(XXX) XXX-XXXX" />
+                  <input
+                    type="text"
+                    id="Phone"
+                    name="Phone"
+                    required
+                    placeholder="(XXX) XXX-XXXX"
+                  />
                 </div>
               </div>
               <!-- Project Type -->
@@ -929,6 +938,7 @@
                     id="Project_Type"
                     name="Project_Type"
                     placeholder="Kitchen, bathroom, other"
+                    required
                   />
                 </div>
               </div>
@@ -948,6 +958,7 @@
                     id="Location"
                     name="Location"
                     placeholder="Location or ZIP Code"
+                    required
                   />
                 </div>
               </div>
@@ -961,7 +972,7 @@
                 </div>
 
                 <div class="zcwf_col_fld">
-                  <input type="date" id="Start_Date" name="Start Date" />
+                  <input type="date" id="Start_Date" name="Start Date" required />
                 </div>
               </div>
             </div>
@@ -974,7 +985,7 @@
               </div>
 
               <div class="zcwf_col_fld">
-                <input type="text" id="Budget" name="Budget" placeholder="Budget" />
+                <input type="text" id="Budget" name="Budget" placeholder="Budget" required />
               </div>
             </div>
 
@@ -983,6 +994,7 @@
               <div class="zcwf_col_lab"></div>
               <div class="zcwf_col_fld">
                 <textarea
+                  required
                   id="Project_Details"
                   name="Project Details"
                   placeholder="Project Details (Tell us about your remodeling needs)"
@@ -993,7 +1005,7 @@
             <!-- Submit Button -->
             <div class="zcwf_row">
               <div class="zcwf_col_fld">
-                <input type="submit" class="formsubmit" value="Get Started" />
+                <input type="submit" class="formsubmit" value="Get Started" required />
               </div>
             </div>
           </form>
@@ -1016,7 +1028,12 @@
                     contentType: false,
                     processData: false,
                     success: function (data) {
-                      $('#wf_splash_info').text('Form submitted successfully!');
+                      // Detect language based on body class
+                      var successMessage = document.body.classList.contains('lang-es')
+                        ? '¡Formulario enviado con éxito!'
+                        : 'Form submitted successfully!';
+
+                      $('#wf_splash_info').text(successMessage);
                       $('#wf_splash').fadeIn().delay(5000).fadeOut();
                       $('#webform')[0].reset();
                     },
@@ -1155,10 +1172,12 @@
       var swiper = new Swiper('.mySwiper', {
         pagination: {
           el: '.swiper-pagination',
+          clickable: true,
         },
         slidesPerView: 2.8,
         spaceBetween: 32,
-        loop: true,
+        // loop: true,
+        initialSlide: 1,
 
         centeredSlides: true,
         zoom: {

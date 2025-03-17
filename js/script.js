@@ -131,3 +131,53 @@ testiWrapper.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 0.85; // Reduced speed multiplier for smoother scrolling
   testiWrapper.scrollLeft = scrollLeft - walk;
 });
+
+const testiItems = document.querySelectorAll('.testi_item');
+const arrowIcon = document.querySelector('.arrow-icon-scroll');
+
+let itemWidth = getItemWidth(); // Dynamically detect width + gap
+let maxScrollLeft = testiWrapper.scrollWidth - testiWrapper.clientWidth; // Max scroll position
+let atEnd = false; // Flag to track if we hit the end
+
+arrowIcon.addEventListener('click', () => {
+  if (atEnd) {
+    // If already at the end, reset to the start on next click
+    testiWrapper.scrollTo({
+      left: 0,
+      behavior: 'smooth',
+    });
+    atEnd = false; // Reset flag
+    return;
+  }
+
+  // Calculate new scroll position
+  let newScrollLeft = testiWrapper.scrollLeft + itemWidth;
+
+  // If we are at the last possible scroll position, set the flag
+  if (newScrollLeft >= maxScrollLeft) {
+    testiWrapper.scrollTo({
+      left: maxScrollLeft,
+      behavior: 'smooth',
+    });
+    atEnd = true; // Mark that we are at the end
+  } else {
+    // Otherwise, continue scrolling
+    testiWrapper.scrollTo({
+      left: newScrollLeft,
+      behavior: 'smooth',
+    });
+  }
+});
+
+// Function to get item width dynamically based on screen size
+function getItemWidth() {
+  const computedStyle = window.getComputedStyle(testiWrapper);
+  const gap = parseInt(computedStyle.getPropertyValue('gap'), 10) || 32; // Detect gap dynamically
+  return testiItems[0].offsetWidth + gap;
+}
+
+// Update item width & max scroll dynamically on window resize
+window.addEventListener('resize', () => {
+  itemWidth = getItemWidth(); // Recalculate item width with correct gap
+  maxScrollLeft = testiWrapper.scrollWidth - testiWrapper.clientWidth;
+});

@@ -10,6 +10,11 @@
 .testi-conteiner {
   margin-bottom: 62px;
   padding-left: 360px;
+  padding-right: 360px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .testi_title {
@@ -114,12 +119,20 @@
   font-weight: 700;
   line-height: 20px;
 }
+.arrow-icon-scroll {
+  align-self: flex-end;
+  position: relative;
+  top: 52px;
+  cursor: pointer;
+  z-index: 99;
+}
 @media (max-width: 1820px) {
   .testi_wrapper {
     padding-left: 310px;
   }
   .testi-conteiner {
     padding-left: 310px;
+    padding-right: 310px;
   }
 }
 @media (max-width: 1720px) {
@@ -128,6 +141,7 @@
   }
   .testi-conteiner {
     padding-left: 260px;
+    padding-right: 260px;
   }
 }
 @media (max-width: 1620px) {
@@ -136,6 +150,7 @@
   }
   .testi-conteiner {
     padding-left: 200px;
+    padding-right: 200px;
   }
 }
 @media (max-width: 1520px) {
@@ -144,6 +159,7 @@
   }
   .testi-conteiner {
     padding-left: 140px;
+    padding-right: 140px;
   }
 }
 @media (max-width: 1440px) {
@@ -152,6 +168,7 @@
   }
   .testi-conteiner {
     padding-left: 100px;
+    padding-right: 100px;
   }
 }
 @media (max-width: 1250px) {
@@ -160,6 +177,7 @@
   }
   .testi-conteiner {
     padding-left: 29px;
+    padding-right: 29px;
   }
 }
 @media (max-width: 768px) {
