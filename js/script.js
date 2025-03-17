@@ -43,9 +43,46 @@ document.addEventListener('DOMContentLoaded', function () {
   const esSelectors = document.querySelectorAll('.selector.espaniol');
   const body = document.body;
 
+  const placeholders = {
+    en: {
+      First_Name: 'Name',
+      Email: 'Email*',
+      Phone: '(XXX) XXX-XXXX',
+      Project_Type: 'Kitchen, bathroom, other',
+      Location: 'Location or ZIP Code',
+      Budget: 'Budget',
+      Project_Details: 'Project Details (Tell us about your remodeling needs)',
+      Submit_Button: 'Get Started',
+    },
+    es: {
+      First_Name: 'Nombre',
+      Email: 'Correo Electrónico*',
+      Phone: '(XXX) XXX-XXXX',
+      Project_Type: 'Cocina, baño, otro',
+      Location: 'Ubicación o Código Postal',
+      Budget: 'Estimado',
+      Project_Details: 'Detalles del Proyecto (Cuéntanos sobre tus necesidades de remodelación)',
+      Submit_Button: 'Comenzar',
+    },
+  };
+
   function changeLanguage(lang) {
     body.classList.remove('lang-en', 'lang-es');
     body.classList.add(`lang-${lang}`);
+    updatePlaceholders(lang);
+  }
+
+  function updatePlaceholders(lang) {
+    document.getElementById('First_Name').placeholder = placeholders[lang].First_Name;
+    document.getElementById('Email').placeholder = placeholders[lang].Email;
+    document.getElementById('Phone').placeholder = placeholders[lang].Phone;
+    document.getElementById('Project_Type').placeholder = placeholders[lang].Project_Type;
+    document.getElementById('Location').placeholder = placeholders[lang].Location;
+    document.getElementById('Budget').placeholder = placeholders[lang].Budget;
+    document.getElementById('Project_Details').placeholder = placeholders[lang].Project_Details;
+
+    // Update Submit Button Text
+    document.querySelector('.formsubmit').value = placeholders[lang].Submit_Button;
   }
 
   // Set default language to English on load
