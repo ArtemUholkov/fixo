@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     body.classList.remove('lang-en', 'lang-es');
     body.classList.add(`lang-${lang}`);
     updatePlaceholders(lang);
+    updateLanguageLink(lang);
   }
 
   function updatePlaceholders(lang) {
@@ -85,8 +86,15 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.formsubmit').value = placeholders[lang].Submit_Button;
   }
 
-  // Set default language to English on load
-  changeLanguage('en');
+  // Update the language link URL with #en or #esp
+  function updateLanguageLink(lang) {
+    const currentUrl = window.location.href.split('#')[0]; // Get the base URL without the hash
+    const hash = lang === 'es' ? 'esp' : lang; // Use 'esp' for Spanish instead of 'es'
+    window.history.replaceState(null, '', `${currentUrl}#${hash}`);
+  }
+
+  // Set default language to Spanish on load
+  changeLanguage('es');
 
   enSelectors.forEach((selector) => {
     selector.addEventListener('click', () => changeLanguage('en'));
