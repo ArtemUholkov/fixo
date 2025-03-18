@@ -93,8 +93,20 @@ document.addEventListener('DOMContentLoaded', function () {
     window.history.replaceState(null, '', `${currentUrl}#${hash}`);
   }
 
-  // Set default language to Spanish on load
-  changeLanguage('es');
+  // Set the language based on the URL fragment on page load
+  function setLanguageFromURL() {
+    const hash = window.location.hash.replace('#', ''); // Get the part after the hash
+    if (hash === 'esp') {
+      changeLanguage('es');
+    } else if (hash === 'en') {
+      changeLanguage('en');
+    } else {
+      changeLanguage('es'); // Default to Spanish if no valid language is found in the URL
+    }
+  }
+
+  // Set the language based on the URL fragment when the page loads
+  setLanguageFromURL();
 
   enSelectors.forEach((selector) => {
     selector.addEventListener('click', () => changeLanguage('en'));
