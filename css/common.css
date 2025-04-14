@@ -187,3 +187,54 @@ a:hover {
 .lang-es .en {
   display: none;
 }
+
+/* Modal Styles */
+.modal-dialog {
+  max-width: 800px;
+  margin: 1.75rem auto;
+}
+
+.modal-content {
+  border-radius: 10px;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem;
+}
+
+.modal-title {
+  color: var(--Dark-Blue, #03061b);
+  font-family: 'Barlow Semi Condensed';
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.close {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 0.75;
+}
+
+/* Ensure iframe is responsive */
+.modal-body iframe {
+  width: 100%;
+  min-height: 500px;
+  border: none;
+}

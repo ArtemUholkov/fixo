@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const enSelectors = document.querySelectorAll('.selector.english');
   const esSelectors = document.querySelectorAll('.selector.espaniol');
   const body = document.body;
+  const contactButtons = document.querySelectorAll('a[href="#contact"]');
 
   const placeholders = {
     en: {
@@ -69,41 +70,38 @@ document.addEventListener('DOMContentLoaded', function () {
   function changeLanguage(lang) {
     body.classList.remove('lang-en', 'lang-es');
     body.classList.add(`lang-${lang}`);
-    // updatePlaceholders(lang);
-    // updateLanguageLink(lang);
+    // Close any open modals
+    $('.modal').modal('hide');
   }
-
-  // function updatePlaceholders(lang) {
-  //   document.getElementById('First_Name').placeholder = placeholders[lang].First_Name;
-  //   document.getElementById('Email').placeholder = placeholders[lang].Email;
-  //   document.getElementById('Phone').placeholder = placeholders[lang].Phone;
-  //   document.getElementById('Project_Type').placeholder = placeholders[lang].Project_Type;
-  //   document.getElementById('Location').placeholder = placeholders[lang].Location;
-  //   document.getElementById('Budget').placeholder = placeholders[lang].Budget;
-  //   document.getElementById('Project_Details').placeholder = placeholders[lang].Project_Details;
-
-  //   // Update Submit Button Text
-  //   document.querySelector('.formsubmit').value = placeholders[lang].Submit_Button;
-  // }
 
   // Update the language link URL with #en or #esp
   function updateLanguageLink(lang) {
-    const currentUrl = window.location.href.split('#')[0]; // Get the base URL without the hash
-    const hash = lang === 'es' ? 'esp' : lang; // Use 'esp' for Spanish instead of 'es'
+    const currentUrl = window.location.href.split('#')[0];
+    const hash = lang === 'es' ? 'esp' : lang;
     window.history.replaceState(null, '', `${currentUrl}#${hash}`);
   }
 
   // Set the language based on the URL fragment on page load
   function setLanguageFromURL() {
-    const hash = window.location.hash.replace('#', ''); // Get the part after the hash
+    const hash = window.location.hash.replace('#', '');
     if (hash === 'esp') {
       changeLanguage('es');
     } else if (hash === 'en') {
       changeLanguage('en');
     } else {
-      changeLanguage('es'); // Default to Spanish if no valid language is found in the URL
+      changeLanguage('es');
     }
   }
+
+  // Handle contact button clicks
+  contactButtons.forEach((button) => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      const isEnglish = body.classList.contains('lang-en');
+      const modalId = isEnglish ? '#englishModal' : '#spanishModal';
+      $(modalId).modal('show');
+    });
+  });
 
   // Set the language based on the URL fragment when the page loads
   setLanguageFromURL();
