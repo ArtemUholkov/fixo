@@ -10,3 +10,168 @@
 @import url(trans.css);
 
 @import url(footer.css);
+
+/* Privacy Policy Styles */
+.privacy-policy {
+  padding: 80px 0;
+  min-height: calc(100vh - 400px);
+}
+
+.privacy-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #03061b;
+  font-family: Montserrat;
+}
+
+.privacy-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.privacy-section {
+  margin-bottom: 40px;
+}
+
+.privacy-date {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  font-family: Montserrat;
+}
+
+.privacy-intro {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #333;
+  font-family: Montserrat;
+}
+
+.privacy-block {
+  margin-bottom: 30px;
+}
+
+.privacy-block h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #03061b;
+  margin-bottom: 15px;
+  font-family: Montserrat;
+}
+
+.privacy-block p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: Montserrat;
+}
+
+.privacy-block ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  font-family: Montserrat;
+}
+
+.privacy-block ul li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 8px;
+  font-family: Montserrat;
+}
+
+.privacy-note {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+  font-family: Montserrat;
+}
+
+.privacy-thanks {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  color: #03061b;
+  margin-top: 40px;
+}
+
+.privacy-block a {
+  color: #03061b;
+  text-decoration: underline;
+}
+
+.privacy-block a:hover {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .privacy-policy {
+    padding: 120px 0;
+  }
+
+  .privacy-title {
+    font-size: 28px;
+    font-family: Montserrat;
+  }
+
+  .privacy-intro {
+    font-size: 16px;
+    font-family: Montserrat;
+  }
+
+  .privacy-block h2 {
+    font-size: 20px;
+    font-family: Montserrat;
+  }
+
+  .privacy-block p,
+  .privacy-block ul li {
+    font-size: 14px;
+    font-family: Montserrat;
+  }
+}
+
+/* Add these styles for the privacy policy page mobile language selector */
+.privacy-policy .en-esp-selector.mob-selector {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .privacy-policy .en-esp-selector:not(.mob-selector) {
+    display: none;
+  }
+
+  .privacy-policy .en-esp-selector.mob-selector {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  /* background: #25d366; */
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s, background 0.2s;
+  background: none;
+}
+.whatsapp-float:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  /* background: #128c7e; */
+  background: none;
+}
+.whatsapp-float img {
+  display: block;
+}
