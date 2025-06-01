@@ -155,7 +155,7 @@
 .whatsapp-float {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  right: 34px;
   z-index: 9999;
   /* background: #25d366; */
   border-radius: 50%;
@@ -174,4 +174,23 @@
 }
 .whatsapp-float img {
   display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.whatsapp-icon {
+  width: 48px;
+  height: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .whatsapp-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .whatsapp-float img {
+    width: 64px;
+    height: 64px;
+  }
 }
